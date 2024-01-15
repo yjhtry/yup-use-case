@@ -1,6 +1,9 @@
 <script setup lang="ts">
+
 </script>
 
 <template>
-  <div />
+  <div text="6">
+    Learn yup bt tests
+  </div>
 </template>
