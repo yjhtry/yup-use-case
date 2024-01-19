@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { number, object, string } from 'yup'
 
 describe('test yup test function', () => {
-  it('custom test should return resolved promise', () => {
+  it('should return resolved promise', () => {
     expect(string()
       .trim()
       .test('had trim', d => `${d.path} not trim`, value => !value?.startsWith(' ')).validate(' 123'))
@@ -30,6 +30,7 @@ describe('test yup test function', () => {
     })
 
     expect(order.validate({ no: 1234, sku: 's-1a45-14a' })).rejects.toThrow()
+    expect(order.validate({ no: 1234 })).resolves
   })
 
   it('custom test and set skipAbsent false should be rejected', () => {

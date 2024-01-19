@@ -2,6 +2,12 @@ import { assert, describe, expect, it } from 'vitest'
 
 import { date, number, object, string } from 'yup'
 
+/**
+ * test yup cast
+ * 1. basic type validation
+ * 2. type cast on strict mode
+ */
+
 describe('test yup cast', () => {
   const userSchema = object({
     name: string().required(),
