@@ -30,7 +30,7 @@ describe('test yup cast', () => {
     })).rejects.toThrow()
   })
 
-  it('basic type should be cast as default', () => {
+  it('basic type should be cast when strict false', () => {
     assert.deepStrictEqual(
       userSchema.cast({
         name: 'jimmy',

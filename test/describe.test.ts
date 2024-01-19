@@ -13,10 +13,6 @@ describe('test yup describe', () => {
       type: 'test',
     }).default({ name: 'default', customKey: 11 })
 
-    const description = schema.describe()
-
-    console.log(description)
-
     expect(schema.describe().default).toEqual({
       name: 'default',
       customKey: 11,
